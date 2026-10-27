@@ -1,7 +1,7 @@
 {
-  "name": "Chantier · BOUAZZA IMMO",
-  "short_name": "Chantier",
-  "description": "Suivi de chantier : plans par niveau, avancement des travaux, photos et problèmes par appartement.",
+  "name": "Plans · BOUAZZA IMMO",
+  "short_name": "Plans",
+  "description": "Plans du chantier : plan de chaque niveau, touchez un appartement pour voir son plan.",
   "lang": "fr",
   "start_url": "./",
   "scope": "./",
