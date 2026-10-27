@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chantier · BOUAZZA IMMO</title>
+<meta name="description" content="Suivi de chantier : plans par niveau, avancement des travaux, photos et problèmes par appartement.">
+<meta name="theme-color" content="#1c1d1f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Chantier">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <button class="back" id="back" type="button" aria-label="Retour" hidden><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div class="ttl"><span class="brand" id="brand">Chantier</span><h1 id="title">Niveaux</h1></div>
+  <a class="gear" href="#/reglages" id="gear" aria-label="Réglages"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></a>
+</header>
+<main id="view" tabindex="-1"></main>
+<div id="viewer" hidden>
+  <div class="vbar"><button type="button" id="vminus" aria-label="Dézoomer">−</button><button type="button" id="vplus" aria-label="Zoomer">+</button><button type="button" id="vclose" class="vclose">Fermer</button></div>
+  <div class="vscroll" id="vscroll"><img id="vimg" alt=""></div>
+</div>
+<dialog id="sheet"><form method="dialog" id="sheetform"></form></dialog>
+<input type="file" id="camera" accept="image/*" capture="environment" hidden>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
