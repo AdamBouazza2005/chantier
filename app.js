@@ -89,3 +89,5 @@ document.addEventListener('keydown', e => { const a = e.target.closest && e.targ
 window.addEventListener('hashchange', show);
 show();
 if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(() => { });
+// une nouvelle version vient de s'installer : on recharge pour l'afficher tout de suite
+if ('serviceWorker' in navigator && navigator.serviceWorker.controller) { let reloaded = false; navigator.serviceWorker.addEventListener('controllerchange', () => { if (!reloaded) { reloaded = true; location.reload(); } }); }
